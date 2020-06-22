@@ -23,7 +23,24 @@
 
 body {
   box-sizing: border-box;
-  background-color: navy;
+  display: grid;
+  background: rgb(224, 157, 227);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(224, 157, 227, 1) 0%,
+    rgba(0, 131, 255, 1) 47%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(224, 157, 227, 1) 0%,
+    rgba(0, 131, 255, 1) 47%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(224, 157, 227, 1) 0%,
+    rgba(0, 131, 255, 1) 47%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e09de3",endColorstr="#0083ff",GradientType=1);
   font-family: "Roboto";
   color: white;
   margin: 0;
@@ -32,27 +49,33 @@ body {
 
 .header {
   display: grid;
-  background-color: #3679e3;
+  justify-content: space-evenly;
+
 }
 
 nav {
   display: flex;
-  width: 10em;
+  width: 100vw;
 }
 
 ul {
   display: flex;
-  flex-direction: row;
-  margin: 1em;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
   list-style-type: none;
+  box-shadow: 0 0 3px 3px lightgrey;
 }
 
 li > a {
-  color: #76a3ec;
+  color: white;
   width: 100%;
   display: flex;
-  justify-items: center;
-  padding: 1rem;
+  margin-left: 1.3em;
+  padding: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 li a:hover {
@@ -89,7 +112,6 @@ h2 {
   justify-self: center;
   width: 50%;
   border-style: groove;
-  border: 0.04em solid white;
 }
 
 .mysensar-slides,
@@ -97,6 +119,18 @@ h2 {
   display: grid;
   margin-left: 0.5em;
 }
+
+.mysensar-prototype, .mysensar-proto-gif {
+  display: grid;
+
+}
+
+.mysensar-proto-gif {
+ justify-self: center;
+ padding-top: 1em;
+}
+
+/* Tablet styles ------------------------------------------- */
 
 @media only screen and (min-width: 550px) {
   body,
@@ -107,6 +141,8 @@ h2 {
     flex-direction: column;
   }
 }
+
+/* Desktop styles -------------------------------------------*/
 
 @media only screen and (min-width: 750px) {
   body,
