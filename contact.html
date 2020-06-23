@@ -16,23 +16,43 @@
   </head>
   <body>
     <header>
-      <nav class="navbar">
-        <ul>
-          <li>
+      <div class="navbar nav-contact">
+        <nav>
             <a href="./index.html">Home</a>
-          </li>
-          <li>
-            <a href="./about.html">About Me</a>
-          </li>
-          <li>
+            <a href="./about.html">About</a>
             <a href="./projects.html">Projects</a>
-          </li>
-          <li>
-            <a href="./contact.html">Contact</a>
-          </li>
-        </ul>
-      </nav>
+        </nav>
     </header>
-    <h1></h1>
+    <div class="contact-container">
+      <section>
+        <div class="contact-header">
+          <h1>Contact Me</h1>
+          <p>Send me a message and I will respond as soon as possible.</p>
+        </div>
+      <form class="contact" action="./contact.html">
+        <label class="label" for="name">
+          <input 
+          type="text"
+          placeholder="Name"
+          class="name"
+          required/>
+        </label>
+        <label class="label" for="email"> 
+          <input 
+          type="text" 
+          placeholder="Email"
+          class="email"
+          required />
+        </label>
+        <label class="label" for="message">
+          <input 
+          type="text"
+          placeholder="Message" 
+          class="message"
+          required />
+        </label> <br>
+        <button class="contact-submit-button">Submit</button>
+      </form>
+    </section>
   </body>
 </html>

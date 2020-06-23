@@ -21,7 +21,14 @@
     url("https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap");
 }
 
-body {
+@keyframes mymove {
+  50% {
+    text-indent: 60px;
+  }
+}
+
+body,
+.navbar {
   box-sizing: border-box;
   display: grid;
   background: rgb(224, 157, 227);
@@ -47,10 +54,38 @@ body {
   padding: 0;
 }
 
+.navbar {
+  overflow: hidden;
+  display: flex;
+  position: fixed;
+  top: 0;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar a {
+  color: #feeafa;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  padding: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-decoration: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .header {
   display: grid;
-  justify-content: space-evenly;
+  margin-bottom: 1em;
+  margin-top: 3em;
+}
 
+.header > h1 {
+  align-items: center;
 }
 
 nav {
@@ -58,36 +93,17 @@ nav {
   width: 100vw;
 }
 
-ul {
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-  padding: 0;
-  width: 100%;
-  list-style-type: none;
-  box-shadow: 0 0 3px 3px lightgrey;
-}
-
-li > a {
-  color: white;
-  width: 100%;
-  display: flex;
-  margin-left: 1.3em;
-  padding: 0.5rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-li a:hover {
+.navbar a:hover {
   background-color: navy;
   color: white;
 }
+
 h1 {
   font-family: "Lobster Two";
   color: white;
   display: grid;
-  justify-self: center;
-  font-size: 3em;
+  text-align: center;
+  font-size: 5em;
 }
 
 h2 {
@@ -102,32 +118,147 @@ h2 {
 
 .header > p {
   font-size: 1.5em;
-  margin-left: 0.5em;
   color: white;
-  padding-bottom: 2em;
+  padding: 1em;
+  line-height: 1.6;
 }
 
 .mypic {
   display: grid;
   justify-self: center;
   width: 50%;
-  border-style: groove;
+  box-shadow: 10px 8px 10px 8px rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* About me page styles */
+.about-me-container {
+  display: grid;
+  margin-bottom: 1em;
+  margin-top: 2em;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me-container > h1 {
+  padding-top: 2rem;
+}
+
+.about-me-container > p {
+  display: grid;
+  text-align: left;
+  color: white;
+  line-height: 1.6;
+  padding: 1.7em;
+  margin: 0 auto;
+}
+
+/* Projects page styles */
+
+.projects-container {
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 3rem;
+}
+
+.mysensar-description,
+.veality-description {
+  text-align: left;
+  margin-right: 0.7em;
+  margin-bottom: 1em;
 }
 
 .mysensar-slides,
-.veality-slides {
+.veality-container,
+.veality-slides,
+.mysensar-container,
+.mysensar-proto-gif {
   display: grid;
-  margin-left: 0.5em;
+  margin-left: 0.3em;
 }
 
-.mysensar-prototype, .mysensar-proto-gif {
-  display: grid;
-
+.mysensar-container,
+.mysensar-proto-gif {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .mysensar-proto-gif {
- justify-self: center;
- padding-top: 1em;
+  justify-self: center;
+  padding-top: 1em;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.check-out {
+  color: white;
+  animation: mymove 2s infinite;
+}
+
+.veality-container {
+  padding-top: 2rem;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.veality-slides {
+  justify-self: start;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Contact page styles */
+.contact-container {
+  display: flex;
+  padding-top: 3em;
+  margin-top: 3em;
+  margin-right: 2rem;
+  margin-left: 1.8rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contact-header > h1 {
+  text-align: center;
+  margin: 0.3px;
+}
+
+.contact-header > p {
+  margin-left: 1.6rem;
+  color: white;
+}
+
+input,
+.label {
+  display: flex;
+  padding: 1em;
+  margin-right: 1em;
+  width: 90%;
+}
+
+.label:hover {
+  background-color: pink;
+  justify-content: center;
+}
+.contact {
+  padding-top: 1em;
+  width: 100%;
+  color: lightskyblue;
+}
+
+.contact-submit-button {
+  background-color: pink;
+  color: black;
+  font-weight: 700;
+  border: pink;
+  border-radius: 1em;
+  padding: 1em;
+  width: 10em;
+  margin-left: 4.5em;
+  margin-bottom: 2em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contact-submit-button:hover {
+  background-color: hotpink;
+  /* justify-content: center; */
 }
 
 /* Tablet styles ------------------------------------------- */
@@ -137,8 +268,21 @@ h2 {
   main,
   video,
   .navbar,
-  .header {
+  .header,
+  .contact-container,
+  .projects-container {
     flex-direction: column;
+  }
+
+  .check-out,
+  .mysensar-slides,
+  .veality-slides {
+    justify-self: center;
+  }
+
+  iframe {
+    width: 400px;
+    height: 300px;
   }
 }
 
@@ -148,8 +292,58 @@ h2 {
   body,
   main,
   video,
-  .navbar,
   .header {
     flex-direction: column;
+  }
+  .check-out,
+  .mysensar-slides,
+  .veality-slides {
+    justify-self: center;
+  }
+
+  iframe {
+    width: 600px;
+    height: 500px;
+  }
+  .mypic {
+    width: 200px;
+    height: 200px;
+  }
+
+  h1 {
+    font-size: 10em;
+  }
+
+  .header > p {
+    font-size: 3em;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 5em;
+  }
+
+  nav > a {
+    font-size: 2em;
+    justify-content: center;
+  }
+
+  .contact-header > p {
+    font-size: 2em;
+  }
+
+  .contact-submit-button {
+    background-color: pink;
+    color: black;
+    font-weight: 700;
+    font-size: 1rem;
+    border: pink;
+    border-radius: 1em;
+    padding: 1.4em;
+    align-self: left;
+    width: 30em;
+    margin-left: 1em;
+    margin-bottom: 2em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 }
