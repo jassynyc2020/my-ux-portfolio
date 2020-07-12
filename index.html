@@ -4,44 +4,90 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nisha_UX Portfolio</title>
-    <link rel="stylesheet" href="./style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://coolors.co/226ce0-3679e3-4885e6-5990e8-689aea-76a3ec"
-    />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <header>
-      <div class="navbar">
-        <nav>
-          <a href="./about.html">About</a>
-          <a href="./projects.html">Projects</a>
-          <a href="./contact.html">Contact</a>
-        </nav>
+      <div class="hero-container">
+        <h1 class="hero-intro-description">
+          Hi, I'm Nishi! As a designer, I aspire to make people feel happy and
+          empowered.</h1>
       </div>
     </header>
-    <div class="header">
-      <h1>Nishi Haider</h1>
-      <img class="mypic" src="./images/mypic.jpeg" alt="Nishi's Picture" />
-      <p>
-        I am a UX UI Designer who designs for a smooth happy flow user
-        experience while keeping in mind, the bottom line.
-      </p>
+    <div>
+      <h2 class="case-study-section">Case Studies</h2>
+        <div class="mysensar-case-container">
+          <h3 class="mysensar-title">MySensAR</h3>
+          <img src="./video/mysensarproto-resized.gif" alt="" class="mysensar-prototype-image">
+          <p class="mysensar-intro-description">Have you ever been sick or hurt while having no health insurance and no money to see a doctor&#63 
+            Or been fearful or reluctant to see a doctor&#63</p>
+          <h3 class="mysensar-problem-statement-title">Problem Statement</h3>
+          <p class="mysensar-problem-statement-description">Giving people more control over their
+            health with self-education and self-diagnosis by integrating augmented reality to pinpoint the
+            exact location of their symptoms.  It saves money, time and worries over going to a 
+            doctor's office, especially for those who are reluctant to see a doctor or need to save their money.</p>
+        </div>
+        <div class="veality">
+          <h3 class="veality-title">Veality</h3>
+          <img src="./images/veality-browser.png" alt="veality-image" class="veality-prototype-selection-image" />
+          <p class="veality-description">A futuristic virtual reality app that in the not too distant future
+              will be a significant part of the entertainment genre.  By designing a simplistic yet engaging interface, 
+              so all ages can navigate.  To ensure the grandparents journey was a happy one.</p>
+        </div>
     </div>
-    <section>
-      <div class="mysensar-prototype"></div>
-    </section>
-    <footer class="footer">
-      <!-- <i class="fa fa-linkedin-square" style="font-size:24px"></i>
-      <i class="fab fa-twitter-square" style="font-size: 24px;"></i> -->
-    </footer>
+    <div class="logo-designs-container">
+      <h2 class="logo-designs-title">Logo Designs</h2>
+    </div>
+      <div class="deafkidscode-logo-section">
+        <h3 class="deafkidscode-logo-title">Deaf Kids Code</h3>
+        <img src="./images/deafkidscodelogo.jpeg" alt="deaf kids code logo" class="deafkidsocode-logo-image" />
+        <p class="deafkidscode-logo-description">
+            Designed a logo which intertwined the world of coding with Deaf Kids Code.</p>
+      </div>
+      <div class="deafkidscode-black-lives-logo">
+        <h3 class="deafkidscode-black-lives-title">Deaf Kids Code-Black Lives Matter logo</h3>
+        <img src="./images/deafkidscodeblmlogo.jpeg" alt="deaf kids code - black lives matter" class="deafkidscode-blm-logo-image">
+      </div>
+      <div class="resume-container">
+        <h3 class="resume-title">Resume</h3>
+        <img src="./images/resume.png" alt="Nishi Haider's Resume">
+      </div>
+      <div class="contact-container">
+          <div class="contact-header">
+            <h1>Contact Me</h1>
+            <p>Send me a message and I will respond as soon as possible.</p>
+          </div>
+        <form class="contact" action="./contact.html">
+          <label class="label" for="name">
+            <input 
+            type="text"
+            placeholder="Name"
+            class="name"
+            required/>
+          </label>
+          <label class="label" for="email"> 
+            <input 
+            type="text" 
+            placeholder="Email"
+            class="email"
+            required />
+          </label>
+          <label class="label" for="message">
+            <input 
+            type="text"
+            placeholder="Message" 
+            class="message"
+            required />
+          </label> <br>
+          <button class="contact-submit-button">Submit</button>
+        </form>
   </body>
 </html>
